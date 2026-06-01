@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atur Jadwal Berobat - Bidan Aliantina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Atur Jadwal Berobat</h1>
+        <p>Silakan isi data diri pasien untuk membuat janjian konsultasi atau pengobatan.</p>
+        
+        <form action="https://formspree.io/f/xwvzdqkq" method="POST">
+
+            <div class="form-group">
+                <label for="Nama Lengkap pasien">Nama Lengkap Pasien</label>
+                <input type="text" id="Nama Lengkap pasien" name="Nama Lengkap pasien" placeholder="Masukkan nama lengkap pasien" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Nomor Hp Pasien">Nomor HP Pasien</label>
+                <input type="tel" id="Nomor Hp Pasien" name="Nomor Hp Pasien" placeholder="Contoh: 08135096xxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label>Jadwal Perjanjian</label>
+                <div class="form-row">
+                    <div style="flex: 2;">
+                        <input type="date" id="tanggal_bulan" name="Tanggal & Bulan Perjanjian" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <input type="time" id="waktu_jam" name="Waktu Jam Perjanjian" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Tujuan Berobat">Tujuan Berobat</label>
+                <select id="Tujuan Berobat" name="Tujuan Berobat" required>
+                    <option value="">-- Pilih Tujuan --</option>
+                    <option value="Pemeriksaan Kehamilan (ANC)">Pemeriksaan Kehamilan (ANC)</option>
+                    <option value="Imunisasi Bayi/Anak">Imunisasi Bayi / Anak</option>
+                    <option value="Pelayanan KB">Pelayanan Keluarga Berencana (KB)</option>
+                    <option value="Konsultasi Kesehatan">Konsultasi Kesehatan Ibu & Anak</option>
+                    <option value="Pelayanan Umum">Pelayanan Umum</option>
+                    <option value="PAP SMEAR">PAP SMEAR</option>
+                    <option value="Laboratorium">Laboratorium</option>
+                    <option value="Pijat Bayi">Pijat Bayi</option>
+                    <option value="Tindik Bayi">Tindik Bayi</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Catatan Tambahan">Catatan Tambahan</label>
+                <textarea id="Catatan Tambahan" name="Catatan Tambahan" rows="3" placeholder="Masukkan keluhan singkat atau informasi tambahan jika ada..."></textarea>
+            </div>
+
+            <div class="btn-container" style="margin-top: 20px;">
+                <button type="submit" class="btn">Kirim Jadwal</button>
+                <a href="index.html" class="btn btn-secondary">Kembali</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
